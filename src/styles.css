@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+body {
+    background-color: #6d9ac4;
+    font-family: 'Poppins',sans-serif;
+}
+.content{
+    height: 100vh;
+}
+.loginbtn{
+    background-color: #ed5684 !important;
+}
+.form-check-input:checked{
+    background: #ed5684;
+    border-color: #ed5684;
+}
