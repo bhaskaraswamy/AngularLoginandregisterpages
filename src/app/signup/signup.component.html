@@ -5,30 +5,45 @@
                 <h3 class="mb-4 text-center fs-1">Sign Up Form</h3>
                 <form class="mb-3" (ngSubmit)="submitForm()" name="form1" #form="ngForm">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control rounded-0" id="floatingInputuser" placeholder="User Name" name="Name"  [(ngModel)]="UserData.Name" required/>
+                        <input type="text" class="form-control rounded-0" id="floatingInputuser" placeholder="User Name" name="name"  [(ngModel)]="UserData.name"  required maxlength="50"  #nameInput="ngModel"/>
                         <label id="floatingInputuser">User Name</label>
+                        <div *ngIf="nameInput.invalid">
+                              <span *ngIf=" (nameInput.dirty || nameInput.touched || !nameInput.touched) " class="text-danger">{{Errors.name}}</span> 
+                        </div>
                     </div>
                    <div class="form-floating mb-3">
-                       <input type="email" class="form-control rounded-0" id="floatingInputemail" placeholder="name@gmail.com" name="email"  [(ngModel)]="UserData.email"/>
+                       <input type="email" class="form-control rounded-0" id="floatingInputemail" placeholder="name@gmail.com" name="email" pattern="^\S+@\S+\.\S+$"  [(ngModel)]="UserData.email" required #emailInput="ngModel"/>
                        <label id="floatingInputemail">Email</label>
-                   </div>
+                       <div *ngIf="emailInput.invalid">
+                          <span *ngIf=" (emailInput.dirty || emailInput.touched || !emailInput.touched) " class="text-danger">{{Errors.email}}</span> 
+                       </div>
+                    </div>
                    <div class="form-floating mb-3">
-                       <input type="password" class="form-control rounded-0" id="floatingInputpassword" placeholder="password" name="password" [(ngModel)]="UserData.password"/>
+                       <input type="password" class="form-control rounded-0" id="floatingInputpassword" placeholder="password" name="password" [(ngModel)]="UserData.password" maxlength="30" required #passwordInput="ngModel"/>
                        <label id="floatingInputpassword">Password</label>
+                       <div *ngIf="passwordInput.invalid">
+                           <span *ngIf=" (passwordInput.dirty || passwordInput.touched || !passwordInput.touched) " class="text-danger">{{Errors.password}}</span> 
+                       </div>
                    </div>
                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control rounded-0" id="floatingInputconfirm" placeholder="Confirm password"/>
+                        <input type="password" class="form-control rounded-0" id="floatingInputconfirm" placeholder="Confirm password" name="confirmPassword" [(ngModel)]="UserData.confirmPassword" required #confpassInput="ngModel"/>
                         <label id="floatingInputconfirm">Confirm password</label>
+                        <!-- <div *ngIf="confpassInput.invalid"> -->
+                            <span *ngIf=" (confpassInput.dirty || confpassInput.touched || !confpassInput.touched) " class="text-danger">{{Errors.ConfirmPassword}}</span> 
+                        <!-- </div> -->
                    </div>
-                   <div class="d-grid gap-2 mb-3">
+                    <div class="d-grid gap-2 mb-3">
                        <button type="submit" class="btn btn-dark btn-lg border-0 rounded-0 loginbtn">Sign Up</button>
-                   </div>
+                    </div>
                 </form>
                 <div class="sign-up-accounts">
                     <p class="text-center"> <a routerLink="" class="text-decoration-none text-dark"> Or Login</a></p>
                 </div>
             </div>
         </div>
+    </div>
+    <div *ngIf="isLoading" class="loading-indicator-container">
+        <app-loading-indicator></app-loading-indicator>
     </div>
 </section>
 

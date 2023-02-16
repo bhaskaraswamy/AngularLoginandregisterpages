@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url("node_modules/ngx-toastr/toastr.css");
 body {
     background-color: #6d9ac4;
     font-family: 'Poppins',sans-serif;
@@ -15,3 +16,14 @@ body {
     background: #ed5684;
     border-color: #ed5684;
 }
+.loading-indicator-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

@@ -3,19 +3,22 @@
         <div class="col-md-5">
             <div class="box shadow bg-white p-4">
                 <h3 class="mb-4 text-center fs-1">Email Verification</h3>
-                <form class="mb-3">
+                <form class="mb-3" (ngSubmit)="otpSubmit()" name="form" #form="ngForm">
                    <div class="form-floating mb-3">
-                       <input type="number" class="form-control rounded-0" id="floatingInput" placeholder="OTP"/>
+                       <input type="number" class="form-control rounded-0" id="floatingInput" placeholder="OTP" name="otp" [(ngModel)]="otp" required #otpInput="ngModel" />
                        <label id="floatingInput">OTP</label>
+                       <div *ngIf="otpInput.invalid && form.submitted">
+                          <span *ngIf=" (otpInput.invalid || otpInput.dirty || otpInput.touched || !otpInput.touched || form.submitted) " class="text-danger">please enter otp</span> 
+                       </div>
                    </div>
-                   <!-- <div class="form-check mb-3">
-                       <a href="#">resend</a>
-                   </div> -->
                    <div class="d-grid gap-2 mb-3">
-                       <button type="button" class="btn btn-dark btn-lg border-0 rounded-0 loginbtn">Verify</button>
+                       <button type="submit" class="btn btn-dark btn-lg border-0 rounded-0 loginbtn">Verify</button>
                    </div>
                 </form>
             </div>
         </div>
+    </div>
+    <div *ngIf="isLoading" class="loading-indicator-container">
+        <app-loading-indicator></app-loading-indicator>
     </div>
 </section>
