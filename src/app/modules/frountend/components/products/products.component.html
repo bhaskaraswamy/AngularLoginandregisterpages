@@ -1,0 +1,105 @@
+<div class="box">
+    <div class="container">
+        <div class="row">
+            <div class="box-header text-center">
+                Products
+            </div>
+            <div class="box-content">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2  row-cols-lg-2 row-cols-xl-3 g-3 g-sm-3">
+                    <div *ngFor="let item of allproducts$">
+                        <div  class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img [src]="item.image" class="card-img-top" alt="{{item.name}}">
+                                <div class="likehover">
+                                    <!-- <img src="{{ product.likedBy.includes(userId) ? 'heart-filled.png' : 'heart-empty.png' }}" alt="Like"> -->
+                                    <!-- <button (click)="Like(item.id)"></button> -->
+                                    <button (click)="Like(item.id)" class="{{item.likedproduct ? 'like-button':'unlike-button'}}">
+                                        <!-- <span *ngIf="item.likedproduct" class="like-button"></span>
+                                        <span *ngIf="!item.postLiked" class="unlike-button">Like</span> -->
+                                    </button>
+                                    <!-- <button (click)="Like(item.id)" *ngIf="!item.likedproduct" class="unlike-button">
+                                        <span *ngIf="item.likedproduct" class="like-button"></span>
+                                        <span *ngIf="!item.postLiked" class="unlike-button">Like</span>
+                                    </button> -->
+                                </div>
+                                <div class="eyehover">
+                                    <button type="button" (click)="OnproductClick(item.id)"  class="eye-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></button>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">{{item.description}}</p>
+                                    <span class="amount">${{item.price}}</span>
+                                    <span class="price-old">${{item.oldprice}}</span>
+                                    <div class="hoverdiv text-center">
+                                        <a type="button" routerLink="../productCustomization/{{item.id}}" class="cart-image"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-productmodel [id]="productid"></app-productmodel>
+<!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" >
+        <div class="modal-content custom-model">
+            <div class="modal-header">
+               <h1 class="modal-title fs-5" id="staticBackdropLabel">Iphone 14</h1>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div  class="row g-sm-5">
+                        <div class="col-6">
+                            
+                            <img [src]="singleproduct.image" alt="singleproduct.name">
+                        
+                        </div>
+                        <div class="col-6 rightside">
+                            <h6 class="producttitle">{{singleproduct.name}}</h6>
+                            <ul class="listelements">
+                                <li>Brand:   {{singleproduct.brand}}</li>
+                                <li>Color:   {{singleproduct.color}}</li>
+                                <li>Availability:    {{singleproduct.availability}}</li>
+                            </ul>
+                            <span class="amount">${{singleproduct.price}}</span>
+                            <small class="price-old">${{singleproduct.oldprice}}</small>
+                            <h6>Availability options</h6>
+                            <small>Qty</small>
+                            <input type="number" width="100px" height="100px" />
+                            
+                        </div>
+                    </div>
+                    <div class="modeldescription">
+                        <h6 class="producttitle">Description</h6>
+                        <p>
+                            {{singleproduct.description}}
+                            This phone is unlocked and compatible with any carrier of choice on GSM and CDMA networks (e.g. AT&T, T-Mobile, Sprint, Verizon, US Cellular, Cricket, Metro, Tracfone, Mint Mobile, etc.).
+                            Tested for battery health and guaranteed to have a minimum battery capacity of 80%.
+                            Successfully passed a full diagnostic test which ensures like-new functionality and removal of any prior-user personal information.
+                            The device does not come with headphones or a SIM card. It does include a generic (Mfi certified) charger and charging cable.
+                            Inspected and guaranteed to have minimal cosmetic damage, which is not noticeable when the device is held at arm's length.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modelhoverdiv text-center">
+                    <button type="button" class="cart-image"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                   -->
+
+
+<!-- <div *ngFor="let item of allproducts">
+    <div>
+    <img [src]="item.image" alt="{{item.name}}"/>
+    <small>{{item.name}}</small>
+    <small>{{item.id}}</small>
+    <small>{{item.description}}</small>
+    </div>
+</div> -->

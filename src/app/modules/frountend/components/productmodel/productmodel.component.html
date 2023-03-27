@@ -1,0 +1,46 @@
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" >
+            <div class="modal-content custom-model">
+                <div class="modal-header">
+                   <h1 class="modal-title fs-5" id="staticBackdropLabel">Iphone 14</h1>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div *ngIf="Getsingleproduct"  class="row g-sm-5">
+                            <div class="col-6">
+                                
+                                <img [src]="Getsingleproduct?.image" alt="{{Getsingleproduct?.name}}">
+                            
+                            </div>
+                            <div class="col-6 rightside">
+                                <h6 class="producttitle">{{Getsingleproduct?.name}}</h6>
+                                <ul class="listelements">
+                                    <li>Brand: {{Getsingleproduct?.brand}}  </li>
+                                    <li>Color: {{Getsingleproduct?.color}}  </li>
+                                    <li>Availability: {{Getsingleproduct?.availability}}   </li>
+                                </ul>
+                                <span class="amount">$ {{Getsingleproduct?.price}}</span>
+                                <small class="price-old">$ {{Getsingleproduct?.oldprice}}</small>
+                                <!-- <h6>Availability options</h6>
+                                <small>Qty</small>
+                                <input type="number" width="100px" height="100px" /> -->
+                                
+                            </div>
+                        </div>
+                        <div class="modeldescription">
+                            <h6 class="producttitle">Description</h6>
+                            <p>
+                                {{Getsingleproduct?.description}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modelhoverdiv text-center">
+                        <button type="button" class="cart-image"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 

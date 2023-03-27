@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     console.log(this.UserData);
     agents.Users.Login(this.UserData.Email,this.UserData.password)
     .then(Response=>{
-      console.log(Response);
+      // console.log(Response);
       agents.Users.SentOTP(Response.id).then(otpResponse=>{
         console.log(otpResponse);
         localStorage.setItem('Userid',Response.id);
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       })
     })
     .catch(error=>{
-      console.log(error.response);
+      // console.log(error.response);
       if(error.response.status === 404)
       {
         this.toast.error(error.response.data)

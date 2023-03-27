@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { Router} from '@angular/router';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(){
+  @HostListener('window:popstate', ['$event'])
+  onPopState() {
+    this.router.navigate(['/index']);
+  }
+  constructor(private router:Router){
   }
   title = 'LoginPageInAngular';
 }

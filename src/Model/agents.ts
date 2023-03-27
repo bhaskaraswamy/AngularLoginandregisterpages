@@ -1,4 +1,6 @@
 import axios, { AxiosResponse} from "axios";
+import { Observable } from "rxjs";
+
 
 
 axios.defaults.baseURL='https://localhost:7022/api/';
@@ -19,8 +21,28 @@ const Users={
     SentOTP:(id:number)=>requests.postonlyurl(`Users/SendOtptoMail/${id}`),
     VerifyOtp:(id:number,otp:string)=>requests.postonlyurl(`Users/VerifyOTP?id=${id}&otp=${otp}`)
 }
+
+const products={
+    GetProducts:(userid:number)=>requests.get(`Products/Get/${userid}`),
+    GetSingleProduct:(id:number)=>requests.get(`Products/Getproduct/${id}`),
+}
+const likeproduct={
+    likeproduct:(body:{})=>requests.post("LikeProducts/Post",body),
+}
+
+const cartItems={
+    Addtocart:(body:{})=>requests.post("Cart",body)
+}
+const review={
+    AddReview:(body:{})=>requests.post("Review",body),
+    getReview:(productid:number)=>requests.get(`Review/GetproductReviews/${productid}`)
+}
  const agents={
-     Users
+    Users,
+    products,
+    likeproduct,
+    cartItems,
+    review
  }
 
 export default agents

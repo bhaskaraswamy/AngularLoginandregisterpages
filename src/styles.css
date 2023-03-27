@@ -27,3 +27,424 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  .carouselbelowimgs{
+      width: 500px;
+      height: 200px;
+  }
+  /* .imgdiv{
+    margin-bottom: 20px;
+    margin-top: 20px;
+  } */
+  .carouselbelowimgs1{
+      float: left;
+      margin-bottom: 20px;
+  }
+  /* .carouselbelowimgs{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin-right: 20px;
+  } */
+  .imgdiv1{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  .imgdiv2{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  .imgdiv3{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  .imgdiv4{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  .caroselbelowi{
+    margin: 20px 47px 70px;
+    float: left;
+    position: relative;
+    width: 100%;
+  }
+  .description{
+      position: absolute;
+      left: 37px;
+      text-align: left;
+      bottom: auto;
+      top: 30px;
+      right: auto;
+      width: 250px;
+  }
+  .title{
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #808080;
+      font-weight: 400;
+      font-family: 'Dancing Script', cursive;
+  }
+  .subtitle{
+    font-size: 24px;
+    color: #000;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  .bannerbutton{
+    color: #da2127;
+    margin: 20px 0 0 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .box-header{
+    font-size: 24px;
+    font-weight: 400;
+    position: relative;
+    text-transform: capitalize;
+    color: #2a2a2a;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .box .box-header::before{
+    content: "";
+	position: absolute;
+	border-bottom: 3px solid #da2127;
+	width: 100px;
+	bottom: -2px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+  }
+  .sectiondiv{
+    color: white;
+  }
+  .box{
+    margin-bottom: 60px;
+  }
+  .list_unstyled{
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  .list_unstyled li{
+    color: #c1c1c1;
+  }
+  h5{
+    font-size: 15px;
+    margin: 0px 0 20px;
+    position: relative;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0 0 15px;
+  }
+  h5::before{
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid #da2128;
+    left: 0;
+    bottom: -2px;
+    width: 50px;
+  }
+  .section{
+    padding: 70px 15px;
+  }
+  .footerphoneno{
+    font-size: 38px;
+    color: #da2128 !important;
+    width: 100%;
+  }
+  .list_unstyled li{
+    padding-bottom: 10px;
+  }
+  .cart-image{
+     /* adjust to the size of your cart image */
+     background-image: url('https://img.icons8.com/ios/50/EBEBEB/ball-point-pen.png'); 
+     /* replace with the path to your cart image */
+
+    /* background-image: url('https://opencart.templatemela.com/OPC10/OPC100240/OPC1/catalog/view/theme/OPC100240_1/image/megnor/cart.svg'); replace with the path to your cart image */
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-color: #da2128;
+    /* transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out; */
+    border: none;
+    /* position: relative; */
+    background-size: 20px;
+    width: 20px; /* adjust to the size of your cart image */
+    height: 20px;
+    margin-left: 1px;
+    margin-top: 5.5px;
+    /* align-items: center;
+    text-align: center; */
+    /* font-size: 0; */
+    }
+    .model-cart-image{
+      background-image: url('https://opencart.templatemela.com/OPC10/OPC100240/OPC1/catalog/view/theme/OPC100240_1/image/megnor/cart.svg'); /* replace with the path to your cart image */
+   
+    background-repeat: no-repeat;
+    background-color: #da2128;
+    /* transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out; */
+    border: none;
+    /* position: relative; */
+    background-size: 20px;
+    width: 20px; /* adjust to the size of your cart image */
+    height: 20px;
+    margin-left: 1px;
+    margin-top: 5.5px;
+    }
+    .modelhoverdiv{
+      display: block;
+      /* position: absolute; */
+      /* top: 26em; */
+      /* right: 9px; */
+      width: 33px; /* adjust to the size of your cart image */
+      height: 33px;
+      background-color: #da2128;
+      background-size: 50px;
+  
+      justify-content: center;
+    }
+    .hoverdiv{
+      display: none;
+    position: absolute;
+    top: 26em;
+    right: 9px;
+    width: 33px; /* adjust to the size of your cart image */
+    height: 33px;
+    background-color: #da2128;
+    background-size: 50px;
+
+    justify-content: center;
+    }
+    .likehover{
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 33px; /* adjust to the size of your cart image */
+      height: 33px;
+      border: 6px;
+      
+      background-color:#275e96;
+      background-size: 50px;
+      margin-top: 20px;
+    }
+    .unlike-button{
+      background-image: url('https://img.icons8.com/material-outlined/24/null/hearts.png');
+      background-repeat: no-repeat;
+      /* background-color: #da2128; */
+      border: none;
+      background-size: 20px;
+      width: 100%; /* adjust to the size of your cart image */
+      height: 100%;
+      padding-left: 2px;
+      background-color:#ffffff;
+    }
+    .like-button{
+      background-image: url('https://img.icons8.com/color/48/null/hearts.png');
+      background-repeat: no-repeat;
+      /* background-color: #da2128; */
+      border: none;
+      background-size: 20px;
+      width: 100%; /* adjust to the size of your cart image */
+      height: 100%;
+      padding-left: 2px;
+      background-color:#ffffff;
+    }
+    .eye-button{
+      background-image: url('https://img.icons8.com/material-outlined/24/000000/visible--v1.png');
+      background-repeat: no-repeat;
+      /* background-color: #da2128; */
+      border: none;
+      background-size: 20px;
+      width: 100%; /* adjust to the size of your cart image */
+      height: 100%;
+      padding-left: 2px;
+      background-color:#ffffff;
+      /* align-items: center; */
+      /* margin-left: 1px;
+      margin-top: 5.5px; */
+    }
+    .eyehover{
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 33px; /* adjust to the size of your cart image */
+      height: 33px;
+      border: 6px;
+      
+      background-color:#275e96;
+      background-size: 50px;
+      margin-top: 50px;
+    }
+    .eye-image:hover {
+      background-color:#da2128 ;
+    }
+    /* .eyehover:hover{
+      background-color:#da2128 ;
+    } */
+   .card:hover .eyehover{
+     display: block;
+   }
+  .card:hover .hoverdiv {
+    display: block;
+  }
+  .amount{
+    font-weight: 600;
+    color: #da2128;
+  }
+  .headerimages img{
+    margin-left: 20px;
+  }
+  .card:hover .likehover{
+    display: block;
+  }
+  /* .custom-model
+  {
+    width: 1000px;
+    height: 1000px;
+  } */
+  .price-old{
+    color: #a1a1a1;
+    text-decoration: line-through;
+    font-size: 14px;
+    margin: 0 0 0 5px;
+    font-weight: 400;
+  }
+  .listelements{
+    list-style: none;
+    padding: 0%;
+  }
+  .rightside{
+    margin-top: 109px;
+  }
+  .producttitle{
+    font-size: 15px;
+    margin: 0px 0 16px;
+    position: relative;
+    text-transform: uppercase;
+    padding: 0 0 15px;
+  }
+  .producttitle::before{
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid #da2128;
+    left: 0;
+    bottom: 4px;
+    width: 70px;
+  }
+  .custommaindiv{
+    margin-top: 40px;
+    margin-left: 100px;
+    border-radius: 20px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+  }
+  .customdiv1{
+    background-color: #ffffff;
+    border-radius: 12px;
+  }
+  .customproducttitle {
+    font-size: 15px;
+    margin: 0px 0 16px;
+    position: relative;
+    text-transform: uppercase;
+    padding: 0 0 15px;
+  }
+  .customproducttitle::before {
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid #da2128;
+    left: 0;
+    bottom: 4px;
+    width: 70px;
+  }
+  .rightside{
+    margin-top: 4.5em;
+  }
+  .customtextarea{
+     border:1px solid black;
+  }
+  .inanddeinput{
+    border: 0;
+    width: 10%;
+    text-align: center;
+    padding-left: 2px;
+  }
+
+  .indediv{
+    margin-top: 10px;
+  }
+  .addtocartbtn{
+    width: 400px;
+    height: 40px;
+    text-align: center;
+  }
+  .addtobtndiv{
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .buttonactive{
+    color: #ffffff;
+    background-color: #da2128;
+    padding:10px;
+    text-decoration: none;
+  }
+  .buttonInactive{
+    color: #ffffff;
+    background-color: #6c757d;
+    text-decoration: none;
+    padding:10px;
+  }
+  .descriptionfirstdiv .reviewbtn{
+    margin-left: 10px;
+  }
+  .descriptionfirstdiv{
+    margin-bottom: 100px;
+    margin-left: 30px;
+  }
+  .desandrevbtns{
+    margin-bottom: 30px;
+  }
+  #tab-description{
+    padding-bottom: 17px;
+  }
+  .buttonright{
+    float: right;
+  }
+
+  .star {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url('https://img.icons8.com/fluency-systems-regular/48/null/hand-drawn-star--v2.png');
+    background-size: contain;
+    cursor: pointer;
+  }
+  
+  .filled {
+    background-image: url('https://img.icons8.com/color/48/null/filled-star--v1.png');
+  }
+  
+  .displaystar {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url('https://img.icons8.com/fluency-systems-regular/48/null/hand-drawn-star--v2.png');
+    background-size: contain;
+    cursor: pointer;
+  }
+  .displayfilled{
+    background-image: url('https://img.icons8.com/color/48/null/filled-star--v1.png');
+  }

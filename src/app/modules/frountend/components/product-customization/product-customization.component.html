@@ -1,0 +1,95 @@
+<section>
+    <div class="custommaindiv">
+        <div class="container customdiv1">
+            <div class="row ">
+                <div class="col rightside">
+                    <img width="398px" height="407px" src={{singleproduct.image}} alt="iphone" />
+                </div>
+                <div class="col rightside">
+                    <h6 class="customproducttitle">{{singleproduct.name}}</h6>
+                    <ul class="list-unstyled">
+                        <li>Brand: {{singleproduct.brand}}</li>
+                        <li>Availability: {{singleproduct.availability}}</li>
+                    </ul>
+                    <!-- <label>Customization</label> -->
+                    <div class="mb-3">
+                      <label for="custom" class="form-label">Customization</label>
+                      <textarea class="form-control customtextarea" placeholder="Enter Customization points here" [(ngModel)]="custom" name="custom" id="custom" rows="3"></textarea>
+                    </div>
+                    
+                    <label>Qty</label>
+                    <div class="indediv">
+                        <button (click)="minus()" class="btn btn-secondary minus">-</button>
+                        <input type="text" disabled class="inanddeinput" value={{increaseanddecrease}} />
+                        <button (click)="plus()" class="btn btn-secondary plus">+</button>
+                    </div>
+                    <div class="addtobtndiv">
+                       <button (click)="Addtocart()"class="btn btn-danger addtocartbtn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="descriptionfirstdiv">
+                <div class="desandrevbtns">
+                    <a (click)="description()" class="descriptionbtn">Description</a>
+                    <a (click)="review()" class="reviewbtn">Review<span class="badge text-bg-success">{{countofreview}}</span></a>
+                </div>
+                <div id="tab-description">
+                    <p>
+                      {{singleproduct.description}}
+                        <!-- Canon's press material for the EOS 5D states that it 'defines (a) new D-SLR category', while we're not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably 'chunkier'). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR's, an important difference when compared to the latter is that the EOS 5D doesn't have any environmental seals. While Canon don't specifically refer to the EOS 5D as a 'professional' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no do -->
+                    </p>
+                </div>
+                <div class="tabre" id="tab-review">
+                  <div *ngFor="let Onereview of AllReviews">
+                    <div class="card mb-4">
+                      <div class="card-header d-flex justify-content-between">
+                        {{Onereview.name}}
+                        <div class="">
+                          <small>{{Onereview.createdAt | date:'dd/MM/yyyy' }}</small>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <!-- <small>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</small> -->
+                          <small>{{Onereview.review}}</small>
+                          <footer>
+                            <span class="displaystar" [class.displayfilled]="Onereview.rating >= 1" ></span>
+                            <span class="displaystar" [class.displayfilled]="Onereview.rating >= 2" ></span>
+                            <span class="displaystar" [class.displayfilled]="Onereview.rating >= 3" ></span>
+                            <span class="displaystar" [class.displayfilled]="Onereview.rating >= 4" ></span>
+                            <span class="displaystar" [class.displayfilled]="Onereview.rating >= 5" ></span>
+                          </footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pb-5">
+                    <form (ngSubmit)="AddReview()" name="form1" #form="ngForm">
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="reviewName" name="reviewName" placeholder="Enter your name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Your review</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="Review" name="Review" rows="3"></textarea>
+                      </div>
+                      <div class="ratingdiv">
+                        <h6>Rating</h6>
+                        <span class="star" [class.filled]="rating >= 1" (click)="setRating(1)"></span>
+                        <span class="star" [class.filled]="rating >= 2" (click)="setRating(2)"></span>
+                        <span class="star" [class.filled]="rating >= 3" (click)="setRating(3)"></span>
+                        <span class="star" [class.filled]="rating >= 4" (click)="setRating(4)"></span>
+                        <span class="star" [class.filled]="rating >= 5" (click)="setRating(5)"></span>
+                      </div>
+                      <div class="buttonright">
+                      <button type="submit" class="btn btn-danger">Submit</button>
+                      </div>
+                    </form>
+                    
+                  </div>
+                </div>
+            </div>
+         </div>
+    </div>
+</section>
+

@@ -17,7 +17,7 @@ export class OtpPageComponent {
    agents.Users.VerifyOtp(this.userid,this.otp).then(Response=>{
      console.log(Response);
      this.toast.success(Response);
-     this.route.navigate(["index"])
+     this.route.navigate(["store/home"])
    }).catch(err=>{
      console.log(err);
      if(err.response.data == "You enter incorrect OTP")

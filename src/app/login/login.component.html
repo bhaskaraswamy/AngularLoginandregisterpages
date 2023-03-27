@@ -25,9 +25,9 @@
                     <div class="d-grid gap-2 mb-3">
                         <button type="submit" class="btn btn-dark btn-lg border-0 rounded-0 loginbtn">login</button>
                     </div>
-                    <div class="forgot-password-link mb-3 text-right">
+                    <!-- <div class="forgot-password-link mb-3 text-right">
                         <a href="#" title="Forgot Password" class="text-decoration-none">Forgot Password?</a>
-                    </div>
+                    </div> -->
                  </form>
                  <div class="sign-up-accounts">
                     <p class="text-center"> <a routerLink="SighnUp" class="text-decoration-none text-dark"> Or Sign Up</a></p>
@@ -35,7 +35,7 @@
              </div>
          </div>
      </div>
-     <div *ngIf="isLoading" class="loading-indicator-container">
+    <div *ngIf="isLoading" class="loading-indicator-container">
         <app-loading-indicator></app-loading-indicator>
     </div>
 </section>
